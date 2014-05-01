@@ -14,7 +14,7 @@ RUN apt-get install -y nginx
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 
 # Define mountable directories.
-VOLUME ["/data", "/etc/nginx/sites-enabled", "/var/log/nginx"]
+VOLUME ["/usr/share/nginx/www", "/etc/nginx/sites-enabled", "/var/log/nginx"]
 
 # Define working directory.
 WORKDIR /etc/nginx
